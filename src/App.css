@@ -1,38 +1,178 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#social-links img {
+  width: 40px;
+  margin-top: 20px;
+  margin-right: 20px;
+  height: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
+@keyframes wave-animation {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
   }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+img,
+span {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.blob {
+  position: absolute;
+  background-color: #ff0000;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.nav-shadow {
+  box-shadow: 0px 10px 10px rgb(0 0 0 / 9%);
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-items div a {
+  font-size: 18px;
+  transition: 0.3s;
+  padding: 8px;
+  background-color: #f8fafc;
+  border-radius: 6px;
+  color: #0f172a;
+}
+
+.nav-items div a:hover {
+  background-color: #00a2ff;
+  border-color: 1px solid #00a2ff;
+}
+
+.nav-items div a:active {
+  background-color: #38bdf8;
+  border-color: 1px solid #38bdf8;
+}
+
+#experience,
+#education,
+#projects,
+#contacts {
+  display: block;
+}
+
+.blocked-segment {
+  margin: 8px 0px;
+  padding: 12px;
+}
+
+#social-links {
+  display: flex;
+}
+
+#social-links img:hover {
+  cursor: pointer;
+}
+
+li {
+  position: relative;
+  padding-bottom: 1.5rem;
+  border-left: 2px dashed #00a2ff;
+  margin-left: 10px;
+  padding-left: 20px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &:before {
+    content: "";
+    height: 15px;
+    width: 15px;
+    border: 1px solid #00a2ff;
+    background: white;
+    box-shadow: 3px 3px 0px #38bdf8;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+    border-radius: 50%;
+  }
+}
+
+.list-header {
+  color: #0f172a;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+ul li p {
+  color: #0f172a;
+  line-height: 1.5;
+  margin-top: 0.4rem;
+}
+
+.tech-stack div {
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 10%;
+  color: #00a2ff;
+  border: 1px solid #00a2ff;
+  transition: color 0.2s;
+}
+
+.tech-stack div:hover {
+  padding: 5px;
+  border-radius: 10%;
+  color: #38bdf8;
+  border: 1px solid #38bdf8;
+}
+.project-images {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.project-images img {
+  border-radius: 12px;
+  width: 200px;
+  object-fit: contain;
 }
