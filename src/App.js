@@ -18,7 +18,6 @@ import website_4 from "./images/react-app/website_4.png";
 import bluerov from "./images/bluerov/bluerov.png";
 import code from "./images/bluerov/code.png";
 import modem from "./images/bluerov/modem.png";
-import arrow from "./images/arrow.svg";
 
 let prefix = "kelvin.dhoman";
 let provider = "gmail.com";
@@ -138,10 +137,15 @@ function App() {
     <div className="App">
       <NavBar />
       <div className="bg-slate-50 leading-relaxed text-slate-900 antialiased">
+        {/*
+        <span className="particle-green-square" style={{top: 250, left: 250}}></span>
+        <span className="particle-blue-circle" style={{top: 185, right: 350}}></span>
+        <span className="particle-red-circle" style={{bottom: 50, left: 650}}></span>
+        */}
         <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
-          <div className="lg:flex lg:justify-between lg:gap-4 lg:py-96 h-screen">
-            <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-center">
-              <h1 className="text-4x1 font-fbold tracking-tight text-slate-900 text-4xl pb-32">
+          <div className="lg:flex lg:justify-between lg:gap-4 lg:py-96">
+            <div className="sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-center">
+              <h1 className="text-4x1 tracking-tight text-slate-900 text-4xl pb-32">
                 Hey there! <span class="wave">👋</span>
               </h1>
               <div>
@@ -292,12 +296,12 @@ function App() {
             </h3>
             <div className="blocked-segment">
               <ul className="list-inside">
-                <li>
+                <li id="nanoshot">
                   <div className="flex justify-between">
                     <div className="list-header">Mobile Arcade Game</div>
                     <p>📅 June 2019 - February 2020</p>
                   </div>
-                  <div className="flex gap-5 justify-normal tech-stack">
+                  <div className="flex flex-wrap gap-5 justify-normal tech-stack">
                     <div>Unity</div>
                     <div>C#</div>
                     <div>AdMob</div>
@@ -321,14 +325,14 @@ function App() {
                     with positive reviews.
                   </p>
                 </li>
-                <li>
+                <li id="react-site">
                   <div className="flex justify-between">
                     <div className="list-header">
                       Retirement Community Property Website
                     </div>
                     <p>📅 May 2022 - July 2022</p>
                   </div>
-                  <div className="flex gap-5 justify-normal tech-stack">
+                  <div className="flex flex-wrap gap-5 justify-normal tech-stack">
                     <div>MongoDB</div>
                     <div>Express</div>
                     <div>React</div>
@@ -357,12 +361,12 @@ function App() {
                     students to view the website.
                   </p>
                 </li>
-                <li>
+                <li id="java-app">
                   <div className="flex justify-between">
                     <div className="list-header">Shopping Application</div>
                     <p>📅 September 2022 - December 2022</p>
                   </div>
-                  <div className="flex gap-5 justify-normal tech-stack">
+                  <div className="flex flex-wrap gap-5 justify-normal tech-stack">
                     <div>Java</div>
                     <div>Java Swing</div>
                     <div>SQLite</div>
@@ -385,14 +389,14 @@ function App() {
                     Java Swing to structure UI elements
                   </p>
                 </li>
-                <li>
+                <li id="underwater-project">
                   <div className="flex justify-between">
                     <div className="list-header">
                       Wahoo Bay Underwater Drone Project
                     </div>
                     <p>📅 August 2022 - May 2023</p>
                   </div>
-                  <div className="flex gap-5 justify-normal tech-stack">
+                  <div className="flex flex-wrap gap-5 justify-normal tech-stack">
                     <div>Python</div>
                     <div>C</div>
                     <div>BlueROV</div>
@@ -428,8 +432,8 @@ function App() {
         <footer class="flex items-center justify-between flex-wrap bg-slate-50 p-6">
           <div class="flex items-center text-slate-900  mr-6">
             <span class="font-semibold text-xl tracking-tight">
-              Made with <span class="wave">❤️</span> by Kelvin Dhoman - Copyright © 2023. All Rights
-              Reserved.
+              Made with <span class="wave">❤️</span> by Kelvin Dhoman -
+              Copyright © 2023. All Rights Reserved.
             </span>
           </div>
           <div class="w-full footer-items block lg:flex lg:items-center lg:w-auto">

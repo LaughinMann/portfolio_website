@@ -15,6 +15,15 @@
   margin-top: 20px;
   margin-right: 20px;
   height: 40px;
+  transition: transform 0.2s;
+}
+
+#social-links img:hover {
+  transform: scale(1.35);
+}
+
+#social-links img:active {
+  transform: scale(0.9);
 }
 
 .wave {
@@ -94,11 +103,23 @@ span {
   border-color: 1px solid #38bdf8;
 }
 
-#experience,
-#education,
-#projects,
-#contacts {
-  display: block;
+@media (pointer: fine) {
+  #nanoshot img,
+  #react-site img,
+  #java-app img,
+  #underwater-project img {
+    transition: transform 0.2s;
+  }
+
+  #nanoshot img:hover {
+    transform: scale(1.25);
+  }
+
+  #react-site img:hover,
+  #java-app img:hover,
+  #underwater-project img:hover {
+    transform: scale(1.75);
+  }
 }
 
 .blocked-segment {
@@ -175,4 +196,56 @@ ul li p {
   border-radius: 12px;
   width: 200px;
   object-fit: contain;
+}
+
+@media only screen and (min-width: 1024px) {
+  .particle-green-square {
+    position: absolute;
+    display: block;
+    width: 75px;
+    transform: rotate(9deg);
+    height: 75px;
+    background: #45c00c;
+    animation: float 5s ease-in-out infinite;
+    border: 6px solid #318c07;
+    border-radius: 8px;
+  }
+
+  .particle-blue-circle {
+    position: absolute;
+    display: block;
+    width: 75px;
+    transform: rotate(-9deg);
+    height: 75px;
+    background: #00a2ff;
+    animation: float 7s ease-in-out infinite;
+    border: 6px solid #0f71f2;
+    border-radius: 100%;
+  }
+
+  .particle-red-circle {
+    position: absolute;
+    display: block;
+    width: 75px;
+    transform: rotate(-9deg);
+    height: 75px;
+    background: #ff0000;
+    animation: float 10s ease-in-out infinite;
+    border: 6px solid #d92929;
+    border-radius: 8px;
+  }
+
+  @keyframes float {
+    0% {
+      transform: rotate(15deg) translateY(0);
+    }
+
+    50% {
+      transform: rotate(5deg) translateY(-10px);
+    }
+
+    100% {
+      transform: rotate(15deg) translateY(0);
+    }
+  }
 }
